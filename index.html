@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Grisha Koksharov — Real Estate Finance Systems · SectorLumen Ltd.">
   <title>Grisha Koksharov · SectorLumen Ltd</title>
-  <link rel="icon" href="/favicon.ico?v=2" sizes="16x16 32x32 48x48">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+  <link rel="icon" href="favicon.ico?v=2" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=2">
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; background: #fff; color: #171717; font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; -webkit-font-smoothing: antialiased; }
@@ -53,6 +53,63 @@
       h2 { font-size: 22px; }
       .roles { gap: 20px; }
     }
+  :root {
+  --page-width: 1088px;
+  --page-top: 40px;
+  --hero-gap: 56px;
+  --hero-bottom: 32px;
+  --name-size: 44px;
+  --name-bottom: 22px;
+  --subtitle-size: 21px;
+  --portrait-width: 192px;
+  --portrait-height: 240px;
+  --portrait-y: 25%;
+  --mobile-name: 33px;
+  --mobile-portrait-width: 96px;
+  --mobile-portrait-height: 120px;
+}
+
+/* Approved K2 profile layout, 2 November 2026. */
+main { max-width: var(--page-width); padding: var(--page-top) 48px 40px; }
+.hero { padding-right: 0; gap: var(--hero-gap); margin-bottom: var(--hero-bottom); }
+h1 { font-size: var(--name-size); font-weight: 400; line-height: 1.12; letter-spacing: -.022em; margin-bottom: var(--name-bottom); }
+.subtitle { font-size: var(--subtitle-size); line-height: 1.4; letter-spacing: -.018em; }
+.company-description { max-width: 58ch; margin-bottom: 24px; }
+.portrait { width: var(--portrait-width); height: var(--portrait-height); object-position: 50% var(--portrait-y); }
+h2 { font-size: 23px; margin-bottom: 22px; }
+.roles { gap: 16px; }
+@media (max-width: 1023px) {
+  main { padding: 40px 32px; }
+  .hero { gap: 40px; }
+  h1 { font-size: 42px; }
+  .subtitle { font-size: 21px; }
+  .portrait { width: 176px; height: 220px; }
+}
+@media (max-width: 639px) {
+  main { padding: 28px 24px 40px; }
+  .hero { grid-template-columns: 1fr; gap: 24px; margin-bottom: 32px; }
+  h1 { font-size: var(--mobile-name); line-height: 1.14; margin-bottom: 18px; letter-spacing: -.025em; }
+  .subtitle { font-size: 19px; }
+  .company-description { font-size: 16px; margin-bottom: 22px; }
+  .portrait { width: var(--mobile-portrait-width); height: var(--mobile-portrait-height); }
+  h2 { font-size: 22px; margin-bottom: 22px; }
+  .roles { gap: 20px; }
+}
+
+@media (max-width: 639px) {
+  .hero { grid-template-columns: minmax(0, 1fr) var(--mobile-portrait-width); column-gap: 20px; row-gap: 0; align-items: start; }
+  .hero > div { display: contents; }
+  .hero h1 { grid-column: 1; grid-row: 1; align-self: start; margin: 0; padding-top: 1px; }
+  .hero .portrait { grid-column: 2; grid-row: 1; }
+  .hero .subtitle { grid-column: 1 / -1; grid-row: 2; margin: 22px 0 12px; }
+  .hero .company-description { grid-column: 1 / -1; grid-row: 3; margin: 0 0 20px; }
+  .hero a { grid-column: 1 / -1; grid-row: 4; justify-self: start; }
+}
+@media (max-width: 359px) {
+  .hero { column-gap: 14px; }
+  .hero h1 { font-size: 28px; }
+}
+
   </style>
 </head>
 <body>
