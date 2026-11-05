@@ -1,6 +1,6 @@
 # Koksharov.com
 
-Minimal personal website for Grisha Koksharov, Real Estate Finance Systems · SectorLumen Ltd.
+Minimal personal website for Grigorii Koksharov (Grisha), Real Estate Finance Systems · SectorLumen Ltd.
 
 The site is plain HTML and CSS. Edit `index.html` for English and `kr/index.html`
 for Korean. Both pages use `assets/site.css`; the portrait is also in `assets/`.
