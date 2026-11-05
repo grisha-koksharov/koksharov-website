@@ -21,6 +21,10 @@
     a { color: #475569; text-decoration: none; font-size: 17px; }
     a:hover { color: #334155; text-decoration: underline; text-underline-offset: 4px; }
     a:focus-visible { outline: 2px solid #475569; outline-offset: 5px; }
+    .contact-links { display: flex; align-items: center; gap: 12px; }
+    .linkedin-link { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 3px; }
+    .linkedin-link:hover { background: #f5f5f5; }
+    .linkedin-link svg { display: block; width: 20px; height: 20px; }
     .portrait { display: block; width: 208px; height: 260px; object-fit: cover; object-position: 50% 20%; }
     .background { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 56px; align-items: start; }
     h2 { margin: 0 0 24px; font-weight: 500; font-size: 24px; letter-spacing: -.025em; line-height: 1.3; }
@@ -112,7 +116,7 @@ h2 { font-size: 23px; margin-bottom: 22px; }
   .hero .portrait { grid-column: 2; grid-row: 1; }
   .hero .subtitle { grid-column: 1 / -1; grid-row: 2; margin: 22px 0 12px; }
   .hero .company-description { grid-column: 1 / -1; grid-row: 3; margin: 0 0 20px; }
-  .hero a { grid-column: 1 / -1; grid-row: 4; justify-self: start; }
+  .hero .contact-links { grid-column: 1 / -1; grid-row: 4; justify-self: start; }
 }
 @media (max-width: 359px) {
   .hero { column-gap: 14px; }
@@ -131,7 +135,16 @@ h2 { font-size: 23px; margin-bottom: 22px; }
         <h1>Grisha Koksharov</h1>
         <p class="subtitle">Real Estate Finance Systems<span class="separator" aria-hidden="true"> · </span><span class="company">SectorLumen Ltd</span></p>
         <p class="company-description">Data provenance infrastructure for CRE underwriting and portfolio management.</p>
-        <a href="mailto:grisha@koksharov.com">grisha@koksharov.com</a>
+        <nav class="contact-links" aria-label="Contact">
+          <a href="mailto:grisha@koksharov.com">grisha@koksharov.com</a>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/grisha-koksharov-13304b153/" target="_blank" rel="noopener noreferrer" aria-label="Grisha Koksharov on LinkedIn (opens in a new tab)" title="LinkedIn (opens in a new tab)">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="2" y="2" width="20" height="20" rx="1.5" fill="currentColor"/>
+              <circle cx="7.5" cy="7.5" r="1.25" fill="#fff"/>
+              <path d="M6.5 10.5h2V18h-2zM10.5 10.5h2v1c.6-.8 1.4-1.2 2.4-1.2 2.2 0 3.1 1.4 3.1 3.6V18h-2v-3.7c0-1.2-.3-2-1.4-2-1.2 0-2.1.8-2.1 2.3V18h-2z" fill="#fff"/>
+            </svg>
+          </a>
+        </nav>
       </div>
       <img class="portrait" src="assets/grisha-koksharov.jpg" alt="Grisha Koksharov" width="208" height="260">
     </header>
